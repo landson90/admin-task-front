@@ -1,1 +1,46 @@
-<p>sing works!</p>
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title"><b>TaskAdmin - Login</b></h3>
+    <form class="mt-5" [formGroup]="orderForm" (submit)="isLogin()">
+      <div class="form-group ">
+        <input
+          type="email"
+          class="form-control mt-2"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Seu email"
+          name="email"
+          formControlName="email"
+        />
+      <app-v-mensagem-form
+      *ngIf="orderForm.get('email')?.errors?.required &&
+        orderForm.get('email')?.touched"
+        errorMsg="Campo é obrigatorio "></app-v-mensagem-form>
+        <app-v-mensagem-form
+        *ngIf="orderForm.get('email')?.errors?.email &&
+          orderForm.get('email')?.touched"
+          errorMsg="E-mail invalido "></app-v-mensagem-form>
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control mt-3"
+          id="exampleInputPassword1"
+          placeholder="Senha"
+          name="password"
+          formControlName="password"
+        />
+        <app-v-mensagem-form
+      *ngIf="orderForm.get('password')?.errors?.required &&
+        orderForm.get('password')?.touched"
+        errorMsg="Campo é obrigatorio "></app-v-mensagem-form>
+      </div>
+        <button type="submit" class="btn btn-primary btn-block mt-3 form_botao" [disabled]="orderForm.invalid">Enviar</button>
+    </form>
+    <div class="mt-3">
+      <p>Nao possui uma conta ?<a  [routerLink]="['singup']"   class="card-link"> Criar conta</a></p>
+    </div>
+
+
+  </div>
+</div>
