@@ -5,7 +5,8 @@
       <div class="form-group ">
         <input
           type="email"
-          class="form-control mt-2"
+          class="form-control mt-3"
+          [ngClass]="{'is-invalid': orderForm.get('email')?.errors?.required && (!orderForm.invalid || orderForm.get('email')?.touched)}"
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Seu email"
@@ -25,6 +26,7 @@
         <input
           type="password"
           class="form-control mt-3"
+          [ngClass]="{'is-invalid': orderForm.get('password')?.errors?.required && (!orderForm.invalid || orderForm.get('password')?.touched)}"
           id="exampleInputPassword1"
           placeholder="Senha"
           name="password"
