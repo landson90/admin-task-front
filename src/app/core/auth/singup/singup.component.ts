@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-singup',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingupComponent implements OnInit {
 
-  constructor() { }
+  orderForm!: FormGroup;
+
+  constructor(private formBuild: FormBuilder) { }
 
   ngOnInit(): void {
+    this.orderForm = this.formBuild.group({
+      userName: ['', [Validators.required, Validators.minLength(4)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(4)]]
+    })
   }
 
 }

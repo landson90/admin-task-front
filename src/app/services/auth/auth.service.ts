@@ -1,9 +1,9 @@
-import { UserLogin } from './../interfaces/user-login';
+import { UserLogin } from '../../interfaces/user-login';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
-import { IToken } from '../interfaces/i-token';
+import { IToken } from '../../interfaces/i-token';
 
 @Injectable({
   providedIn: 'root'
