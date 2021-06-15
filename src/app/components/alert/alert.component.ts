@@ -11,6 +11,7 @@ export class AlertComponent implements OnInit {
   @Input() type!: string;
   @Input() message!: string;
 
+
   constructor(public bsModalRef: BsModalRef) { }
 
 

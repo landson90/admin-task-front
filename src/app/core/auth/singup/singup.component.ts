@@ -33,7 +33,9 @@ export class SingupComponent implements OnInit {
         this.alertModelService.showAlertSuccess("Usuário criando com sucesso !")
         this.orderForm.reset();
       }, (error => {
-        console.log(error)
+        console.log(error.error)
+
+        this.alertModelService.showAlertDanger(error.error.msg)
       }))
     }
   }

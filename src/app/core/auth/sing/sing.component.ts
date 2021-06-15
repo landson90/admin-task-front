@@ -14,7 +14,7 @@ export class SingComponent implements OnInit {
 
   constructor(
     private formBuild: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
   ) { }
 
   ngOnInit(): void {
