@@ -1,10 +1,12 @@
+import { AlertComponent } from './components/alert/alert.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { VMensagemFormComponent } from './components/v-mensagem-form/v-mensagem-form.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -13,9 +15,14 @@ import { VMensagemFormComponent } from './components/v-mensagem-form/v-mensagem-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    AlertComponent
+  ],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

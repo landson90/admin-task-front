@@ -1,16 +1,15 @@
 <div class="card">
   <div class="card-body">
     <h3 class="card-title"><b>TaskAdmin - Criar conta</b></h3>
-    <form class="mt-5" [formGroup]="orderForm">
+    <form class="mt-5" [formGroup]="orderForm" (submit)="createUser()">
       <div class="form-group ">
         <input
           type="text"
           class="form-control mt-2"
-          id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="Nome"
-          formControlName='userName'
-          [ngClass]="{'is-invalid': orderForm.get('userName')?.errors?.required && (!orderForm.invalid || orderForm.get('userName')?.touched)}"
+          formControlName='username'
+          [ngClass]="{'is-invalid': orderForm.get('username')?.errors?.required && (!orderForm.invalid || orderForm.get('username')?.touched)}"
         />
         <app-v-mensagem-form
         *ngIf="orderForm.get('userName')?.errors?.required &&
@@ -25,7 +24,6 @@
         <input
           type="email"
           class="form-control mt-2"
-          id="exampleInputEmail1"
           aria-describedby="emailHelp"
           placeholder="E-mail"
           formControlName='email'
@@ -44,7 +42,6 @@
         <input
           type="password"
           class="form-control mt-3"
-          id="exampleInputPassword1"
           placeholder="Senha"
           formControlName='password'
           [ngClass]="{'is-invalid': orderForm.get('password')?.errors?.required && (!orderForm.invalid || orderForm.get('password')?.touched)}"
