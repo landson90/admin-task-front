@@ -30,16 +30,12 @@ export class SingComponent implements OnInit {
     if(this.orderForm.valid) {
       const user = this.orderForm.getRawValue() as UserLogin;
       this.authService.login(user).subscribe((response) => {
-        this.alertErroLogin(response.msg,  response.statusCode)
+        console.log(response)
       }, (error) => {
 
       })
     }
   }
 
-  alertErroLogin(loginMsg: string, statuCode: number) {
-    if(statuCode === 400) {
-      this.alertModelService.showAlertDanger(loginMsg)
-    }
-  }
+
 }
