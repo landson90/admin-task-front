@@ -46,4 +46,8 @@ export class UserService {
     this.tokenService.deleteToken();
     this.usuarioSubject.next({})
   }
+
+  hasToken() {
+    return this.tokenService.getToken();
+  }
 }

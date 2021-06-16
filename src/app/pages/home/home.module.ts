@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { TaskComponent } from './task/task.component';
 import { UserComponent } from './user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    RouterModule
   ]
 })
 export class HomeModule { }

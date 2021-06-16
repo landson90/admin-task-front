@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { AlertModalService } from 'src/app/services/alert/alert-modal.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sing',
@@ -16,7 +17,8 @@ export class SingComponent implements OnInit {
   constructor(
     private formBuild: FormBuilder,
     private authService: AuthService,
-    private alertModelService: AlertModalService
+    private alertModelService: AlertModalService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -30,7 +32,7 @@ export class SingComponent implements OnInit {
     if(this.orderForm.valid) {
       const user = this.orderForm.getRawValue() as UserLogin;
       this.authService.login(user).subscribe((response) => {
-        console.log(response)
+        this.router.navigate(['home'])
       }, (error) => {
 
       })

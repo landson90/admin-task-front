@@ -1,5 +1,7 @@
+import { HomeGuard } from './core/guard-router/home/home.guard';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanLoad } from '@angular/router';
+import { AuthGuard } from './core/guard-router/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -9,11 +11,13 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./core/auth/auth.module').then((m) => m.AuthModule)
+    loadChildren: () => import('./core/auth/auth.module').then((m) => m.AuthModule),
+    canLoad: [HomeGuard]
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule)
+    loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule),
+    canLoad: [AuthGuard]
   },
   {
     path: '**',
