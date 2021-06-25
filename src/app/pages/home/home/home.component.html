@@ -4,7 +4,8 @@
         <app-nav-bar></app-nav-bar>
       </header>
       <main>
-        <app-breadcrumb></app-breadcrumb>
+        <app-breadcrumb [breadcrumbList]="pageItem"></app-breadcrumb>
+        <router-outlet></router-outlet>
       </main>
       <div class="sidebar">
         <app-menu></app-menu>

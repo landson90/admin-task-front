@@ -15,7 +15,7 @@ const routes: Routes = [
     canLoad: [HomeGuard]
   },
   {
-    path: 'home',
+    path: 'TaskAdimin',
     loadChildren: () => import('./pages/home/home.module').then((m) => m.HomeModule),
     canLoad: [AuthGuard]
   },

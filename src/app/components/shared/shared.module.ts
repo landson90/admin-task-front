@@ -6,6 +6,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MenuComponent } from '../menu/menu.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatListModule} from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {MatListModule} from '@angular/material/list';
     CommonModule,
     MatToolbarModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    RouterModule
   ],
   exports: [
     NavBarComponent,

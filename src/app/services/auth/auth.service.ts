@@ -32,12 +32,13 @@ export class AuthService {
        }
     ).pipe(
       tap((resp) => {
-
-      //  const typeToken = resp.body?.tipo;
         const authToken = resp.body?.token ?? '';
-      //  const typeTokenAuth = `${typeToken} ${authToken}`;
         this.userService.saveToken(authToken)
       })
     )
+  }
+
+  isLogout() {
+    this.userService.logout();
   }
 }

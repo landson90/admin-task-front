@@ -17,7 +17,7 @@ export class HomeGuard implements CanLoad {
     route: Route,
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
      if(this.userService.hasToken()) {
-        this.router.navigate(['home'])
+        this.router.navigate(['TaskAdimin'])
         return false;
       }
     return true;

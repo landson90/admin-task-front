@@ -1,8 +1,7 @@
 <div class="container mt-3">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active" aria-current="page">Home</li>
+      <li *ngFor="let item of breadcrumbList" class="breadcrumb-item active" aria-current="page"><b>{{item}}</b></li>
     </ol>
   </nav>
-
 </div>

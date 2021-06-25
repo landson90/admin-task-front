@@ -44,4 +44,8 @@
 .ul_menu a:hover{
   text-decoration: none;
   color: #FFDF65;
- }
+}
+
+.botao__sair {
+  margin-top: 100%;
+}
