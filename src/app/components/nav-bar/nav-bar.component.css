@@ -1,0 +1,7 @@
+.header {
+  height: 50px;
+  background: #222b45;
+}
+.header__title {
+  color: #fff;
+}

@@ -7,6 +7,8 @@ import { TaskComponent } from './task/task.component';
 import { UserComponent } from './user/user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
+import { NavBarComponent } from 'src/app/components/nav-bar/nav-bar.component';
+import { SharedModule } from 'src/app/components/shared/shared.module';
 
 
 @NgModule({
@@ -14,12 +16,14 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     TaskComponent,
     UserComponent,
-    DashboardComponent
+    DashboardComponent,
+
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ]
 })
 export class HomeModule { }
