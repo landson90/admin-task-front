@@ -1,3 +1,4 @@
+import { BreadcrumbComponent } from './../breadcrumb/breadcrumb.component';
 import { NavBarComponent } from 'src/app/components/nav-bar/nav-bar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,8 @@ import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     NavBarComponent,
-    MenuComponent
+    MenuComponent,
+    BreadcrumbComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import {MatListModule} from '@angular/material/list';
   ],
   exports: [
     NavBarComponent,
-    MenuComponent
+    MenuComponent,
+    BreadcrumbComponent
   ]
 
 
