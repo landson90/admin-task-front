@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { NavBarComponent } from 'src/app/components/nav-bar/nav-bar.component';
 import { SharedModule } from 'src/app/components/shared/shared.module';
+import { TasksComponent } from './task/tasks/tasks.component';
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { SharedModule } from 'src/app/components/shared/shared.module';
     TaskComponent,
     UserComponent,
     DashboardComponent,
-
+    TasksComponent
   ],
   imports: [
     CommonModule,
