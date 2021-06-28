@@ -15,7 +15,9 @@ export class UserService {
   private usuarioSubject = new BehaviorSubject<IUser>({});
 
   constructor(
+
     private httpClient: HttpClient,
+
     private tokenService: TokenService) {
     this.baseUrl = `${environment.baseUrl}/usuarios`;
     if(this.tokenService.possuiToken()) {
@@ -29,7 +31,7 @@ export class UserService {
     this.usuarioSubject.next(user);
   }
 
-  getUser() {
+  getUser() :Observable<IUser>{
     return this.usuarioSubject.asObservable();
   }
 

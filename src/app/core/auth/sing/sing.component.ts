@@ -32,7 +32,7 @@ export class SingComponent implements OnInit {
     if(this.orderForm.valid) {
       const user = this.orderForm.getRawValue() as UserLogin;
       this.authService.login(user).subscribe((response) => {
-        this.router.navigate(['task-adimin'])
+        this.router.navigate(['TaskAdimin'])
       }, (error) => {
 
       })

@@ -14,7 +14,6 @@ export class MenuComponent implements OnInit {
   }
 
   isLogot() {
-    console.log("porra")
   }
 
 }
