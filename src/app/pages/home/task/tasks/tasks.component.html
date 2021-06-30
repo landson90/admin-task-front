@@ -1,2 +1,32 @@
 <app-breadcrumb [breadcrumbList]="pageItem"></app-breadcrumb>
 
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th >TAREFA</th>
+        <th >STATUS</th>
+        <th >AÇÕES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td>{{task?.title}}</td>
+        <td>{{task?.status}}</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+
+    <pagination
+      [totalItems]="bigTotalItems"
+      [(ngModel)]="bigCurrentPag"
+      [maxSize]="maxSize"
+      (pageChanged)="pageChanged($event)"></pagination>
+  </table>
+  <pre class="card card-block card-header mb-3">
+    Page changed to: {{pagina}}
+  </pre>
+  <ng-template #loading>
+    <span>Carregando Cursos...</span>
+  </ng-template>
+</div>

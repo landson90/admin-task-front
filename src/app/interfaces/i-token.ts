@@ -3,4 +3,5 @@ export interface IToken {
   tipo: string;
   msg: string;
   statusCode: number;
+  sub: number;
 }

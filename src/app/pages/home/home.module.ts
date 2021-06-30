@@ -10,6 +10,10 @@ import { RouterModule } from '@angular/router';
 import { NavBarComponent } from 'src/app/components/nav-bar/nav-bar.component';
 import { SharedModule } from 'src/app/components/shared/shared.module';
 import { TasksComponent } from './task/tasks/tasks.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +28,13 @@ import { TasksComponent } from './task/tasks/tasks.component';
     CommonModule,
     HomeRoutingModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    MatPaginatorModule,
+    MatTableModule,
+    PaginationModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ]
 })
 export class HomeModule { }
